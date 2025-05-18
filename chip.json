@@ -1,0 +1,10 @@
+{
+  "name": "Vent Axia Sentinel Kinetic UART",
+  "author": "Alextrical",
+  "pins": [
+    "RX",
+    "TX",
+    "GND",
+    "VCC"
+  ]
+}
