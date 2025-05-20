@@ -61,7 +61,7 @@ static void on_uart_write_done(void *user_data) {
 
 void chip_timer_event(void *user_data) {
   chip_state_t *chip = (chip_state_t*)user_data;
-  unsigned char alive_str[] = {'\n', 0x02, 0x00, 0x00, 0x08, 0x07, 0x15, 'N', 'o', 'r', 'm', 'a', 'l', ' ', 'A', 'i', 'r', 'f', 'l', 'o', 'w', ' ', ' ', 0x16, '3', '5', ' ', '%', ' ', ' ', 'A', 'u', 't', 'o', ' ', ' ', ' ', ' ', ' ', ' ', 0xF7, 0xD8};
+  unsigned char alive_str[] = {0x02, 0x00, 0x00, 0x0C, 0x07, 0x15, 'N', 'o', 'r', 'm', 'a', 'l', ' ', 'A', 'i', 'r', 'f', 'l', 'o', 'w', ' ', ' ', 0x16, '3', '5', ' ', '%', ' ', ' ', 'A', 'u', 't', 'o', ' ', ' ', ' ', ' ', ' ', ' ', 0xF4, 0x85};
     uint8_t data_out = alive_str[0];
     uart_write(chip->uart0, &data_out, sizeof(alive_str)+1);
 }
